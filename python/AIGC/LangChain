@@ -1,0 +1,124 @@
+# 一、Introduction
+
+为什么需要这个类库
+
+
+
+这个类库是做什么的
+
+
+
+它有什么功能
+
+
+
+
+
+
+
+
+
+# 二、Quickstart
+
+## 2.1 语言模型
+
+### 1、安装
+
+```shell
+pip install langchain
+```
+
+
+
+### 2、设置环境
+
+将密钥设置到环境变量中
+
+```sh
+export OPENAI_API_KEY="..."
+```
+
+或者直接在代码中使用
+
+```py
+from langchain.llms import OpenAI
+
+llm = OpenAI(openai_api_key="...")
+```
+
+
+
+### 3、构建应用
+
+-   首先我们可以设置随机度，设置的随机度越大那么随机出现的答案就越大，这里我们设置成 `0.5`
+
+    ```py
+    from langchain.llms import OpenAI
+    
+    llm = OpenAI(temperature=0.5)
+    ```
+
+-   输入我们想要提问的问题
+
+    ```py
+    llm.predict("What would be a good company name for a company that makes colorful socks?")
+    # >> Feetful of Fun
+    # 结果是随机的
+    ```
+
+
+
+### 4、(Prompt templates) 提示模板
+
+模板的作用就是提供已经存在的上下文，比如我现在需要告诉 AI 我现在需要它编写一个python语言的算法，那么首先我需要告诉它我需要的东西，而提示模板就是预先设定的上文，由它来告诉 AI 它需要生成的是 Python 语言的算法而不是其他的语言的，那么我要询问的时候只需要给 模板对应的名字即可。而不需要告诉它我要生成什么语言的算法。
+
+**案例演示**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 2.2 聊天模型
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
